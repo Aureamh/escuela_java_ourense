@@ -8,8 +8,8 @@ package com.vn.introjava;
 import com.vn.introjava.funcionesbasicas.DatosBasicos;
 import com.vn.introjava.funcionesbasicas.EstructurasControl;
 import static com.vn.introjava.funcionesbasicas.Ordenamiento.ordenarArray;
-import com.vn.introjava.poo.Coche;
-import com.vn.introjava.poo.FabricaCoches;
+import com.vn.introjava.poo.vehiculos.Coche;
+import com.vn.introjava.poo.vehiculos.FabricaCoches;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
