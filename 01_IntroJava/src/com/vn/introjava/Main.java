@@ -13,12 +13,13 @@ import com.vn.introjava.poo.vehiculos.FabricaCoches;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-/** Clase principal del proyecto
+/** Clase principal del proyecto, MODIFICACIONS
  * Ejemplos java
  * @author Equipo 13
  */
 public class Main {
 
+    
     /** Función que se ejecuta al arrancar el programa
      * @param args the command line arguments
      */
