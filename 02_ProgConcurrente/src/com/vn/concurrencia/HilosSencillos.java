@@ -9,11 +9,25 @@ package com.vn.concurrencia;
  *
  * @author Equipo 13
  */
+
+import java.util.ArrayList;
+
 public class HilosSencillos {
     //Cuando una clase está dentro de otra se llama ANIDADA.
     //Para ejecutar un hilo tenemos que implementar siempre RUNNABLE.
     
     static int contCompartido =0;
+    
+    ///- - - - - - - - - - - - - - - - - - - - - -
+    //Ensayo de ejecutar a la vez una cantidad de hilos muy grande.
+    
+    ArrayList<String> HilosA = new ArrayList<String>();
+    ArrayList<String> HilosB = new ArrayList<String>();
+    ArrayList<Thread> thread = new ArrayList<Thread>();
+    
+    
+    
+    /// - - - - - - - - - - - - - - - - - - - - -
     
     HiloA hiloA1,hiloA2;
     HiloB hiloB1,hiloB2;
@@ -25,7 +39,6 @@ public class HilosSencillos {
         this.hiloB2 = new HiloB();
     }
 
-    
     class HiloA implements Runnable{
 
         @Override
@@ -82,6 +95,5 @@ public class HilosSencillos {
         threadHiloA2.run();
         threadHiloB2.run();
         System.out.println("\n***** END - RUN *****\n");
-        
     }
 }
