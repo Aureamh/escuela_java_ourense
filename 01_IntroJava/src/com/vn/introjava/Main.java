@@ -17,12 +17,15 @@ import java.util.logging.Logger;
 import javax.xml.crypto.dsig.TransformException;
 
 /**
- * Clase principal del proyecto Ejemplos java
- *
+ * Clase principal del proyecto
+ * Ejemplos java
  * @author Equipo 13
  */
 public class Main {
-
+    
+    /** Función que se ejecuta al arrancar el programa
+     * @param args the command line arguments
+     */
     public static void main(String[] args) {
         
         /*Error no capturado, se detiene el programa

@@ -25,34 +25,70 @@ public class TestDaoCocheSimple {
     public void testDaoCocheList() throws Exception {
         testInterfaceDaoCoche(new DaoCocheList());
     }
-    
+
     @Test
     public void testDaoCocheMap() throws Exception {
         testInterfaceDaoCoche(new DaoCocheMap());
     }
-    
-    void testInterfaceDaoCoche (IDaoCoche daoCoche) throws Exception {
+
+    void testInterfaceDaoCoche(IDaoCoche daoCoche) throws Exception {
         daoCoche.crear("Coche A");
         daoCoche.crear("Coche B");
-        daoCoche.crear("Coche C");
-        assertEquals(daoCoche.obtenerPorIndice(1).getMarca(), "Coche B");
-        assertEquals(daoCoche.obtenerPorMarca("Coche C").getMarca(), "Coche C");
-        assertEquals(daoCoche.obtenerPorIndice(2).getMarca(), "Coche C");
-    }
-    
-    @Test
-    public void testUsuarioDaoList() throws Exception {
-        IDaoUsuario daoUsuario= new DaoUsuarioList();
-        testUsuario(daoUsuario);
-    }
-    
+        Coche cc = daoCoche.crear("Coche C");
 
-    @Test
-    public void testUsuario(IDaoUsuario daoUsuario) throws Exception {
+        assertEquals("Coche B", daoCoche.obtenerPorIndice(1).getMarca());
+        assertEquals("Coche C", daoCoche.obtenerPorMarca("Coche C").getMarca());
+        assertEquals("Coche C", daoCoche.obtenerPorIndice(2).getMarca());
+
+        Coche modificar = new Coche("Coche B ahora X");
+        daoCoche.modificar(1, modificar);
+        assertEquals("Coche B ahora X", daoCoche.obtenerPorIndice(1).getMarca());
+        assertEquals("Coche B ahora X", daoCoche.obtenerPorMarca("Coche B ahora X").getMarca());
+
+        modificar = new Coche("Coche C");
+        modificar.arrancar();
+        daoCoche.modificar(2, modificar); //El nº 2 es cc, debe de ser arrancado
+        //aquí dentro.
+        assertEquals(modificar.isArrancado(), cc.isArrancado());
+
+        daoCoche.eliminar(1); //Elimnar el B
+        daoCoche.eliminar(daoCoche.obtenerPorMarca("Coche A")); //El A, queda
+        //el C.
+        
+        assertNull(daoCoche.obtenerPorMarca("Coche A"));
+        daoCoche.eliminar(new Coche( "Coche A"));
+
+    if(daoCoche instanceof DaoCocheList){
+            assertEquals("Coche C", daoCoche.obtenerPorIndice(0).getMarca());
+        //El índice baja
+    }else{
+            assertEquals("Coche C", daoCoche.obtenerPorIndice(2).getMarca());
+        //El índice no cambia.
+    }
+}
+
+@Test
+        public void testUsuarioDaoList() throws Exception {
+        IDaoUsuario daoUsuario = new DaoUsuarioList();
+        testUsuarioDao(daoUsuario);
+    }
+    
+    public void testUsuarioDao(IDaoUsuario daoUsuario) throws Exception {
         daoUsuario.crear(new Usuario("Juan",30));
         daoUsuario.crear(new Usuario("Ana",31));
         daoUsuario.crear(new Usuario("Bea",32));
+        daoUsuario.crear(new Usuario("Luis",37));
         assertEquals("Ana", daoUsuario.obtenerPorIndice(1).getNombre());
         assertEquals(32, daoUsuario.obtenerPorNombre("Bea").getEdad()); 
+        
+        daoUsuario.modificar(1, new Usuario("Ana Modif",21));
+        assertEquals("Ana Modif",daoUsuario.obtenerPorIndice(1).getNombre());
+        assertEquals(21,daoUsuario.obtenerPorIndice(1).getEdad());
+        
+        daoUsuario.eliminar(daoUsuario.obtenerPorIndice(0));
+        daoUsuario.eliminar(1); //El 1 ahora es Bea
+        //El 1 ahora es Luis
+        assertEquals("Luis",daoUsuario.obtenerPorIndice(1).getNombre());
+        
     }
 }

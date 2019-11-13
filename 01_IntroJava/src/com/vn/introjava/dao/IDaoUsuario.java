@@ -10,15 +10,7 @@ package com.vn.introjava.dao;
  * @author Equipo 13
  */
 public interface IDaoUsuario extends IGenericDao<Usuario> {
-    
-    //Se pueden sobreescribir, pero no es necesario
-    
-    /*@Override
-    public void crear(Usuario nuevoUsuario) throws Exception;
-    
-    @Override
-    public Usuario obtenerPorIndice(int index); */
-    
+
     public Usuario obtenerPorNombre(String nombre);
     
 }

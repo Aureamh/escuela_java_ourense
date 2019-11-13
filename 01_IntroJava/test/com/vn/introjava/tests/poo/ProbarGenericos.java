@@ -32,6 +32,22 @@ public class ProbarGenericos {
 //            System.out.println(" - " + integer);
 //        }
 //   }
+
+
+//    @Test
+//    public void testearMetodosGenericos() {
+//        ArrayList<Integer> listIn = new ArrayList<Integer>();
+//        int tres = 3, cinco = 5;
+////        insertarIntegerDuplicado(listIn, tres);
+////        insertarIntegerDuplicado(listIn, cinco);
+//        insertarDuplicado(listIn, tres);
+//        insertarDuplicado(listIn, cinco);
+//        System.out.println("Tres sigue siendo " + tres);
+//
+//        for (Integer integer : listIn) {
+//            System.out.println(" - " + integer);
+//        }
+//   }
     
    @Test
     public void testearClaseAnidada() {
@@ -93,11 +109,16 @@ public class ProbarGenericos {
     
     //Entre < > ponemos el nombre del tipo genérico. Esto convierte el método
     //en un "método genérico".
-    static <Tipo> void insertarDuplicado(ArrayList<Tipo> listaGenerica, Tipo i) {
-        listaGenerica.add(i); //Así se añaden los datos al ArrayList
-        listaGenerica.add(i);
-        System.out.println(i + " añadido dos veces");
+    static <Tipo> void insertarDuplicado(ArrayList<Tipo> listaGenerica, Tipo objeto) {
+        listaGenerica.add(objeto); //Así se añaden los datos al ArrayList
+        listaGenerica.add(objeto);
+        System.out.println(objeto + " añadido dos veces");
         //Esto no afecta fuera del método.
+        
+        if(objeto instanceof Integer) {
+            Integer i = (Integer) objeto; //Conversión explícita
+            i = i+2;
+        }
         listaGenerica = null;
     }
     
