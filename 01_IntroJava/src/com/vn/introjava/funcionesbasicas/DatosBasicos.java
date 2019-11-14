@@ -62,11 +62,11 @@ public class DatosBasicos {
         System.out.println("Es cierto?: " + ((5!=5) && 5<=9));//Operador distinto
         
         //Operadores bit a bit
-        //00010101 = 21
+        //00010101 = 21 // De izquierda a derecha: 1, 2, 2^2,2^3...
         //00000111 = 7
         //00000101 = 5 AND (COMPARA LOS DOS PRIMEROS EN COLUMNA 1 Y 1 DA 1. 0 Y 1 DA 0.) 
         //00010111 = 23 OR (COMPARA LOS DOS PRIMEROS EN COLUMNA 1 Y 0 DA 1, 1 Y 1 DA 1, 0 Y 0 DA 0.)
-        //00010010 = 18 XOR (COMPARA LOS DOS PRIMEROS EN COLUMNA SI LOS DOS NUM SON IGUALES SON 0 Y SI SON DISTINTOS SON.)
+        //00010010 = 18 XOR (COMPARA LOS DOS PRIMEROS EN COLUMNA SI LOS DOS NUM SON IGUALES SON 0 Y SI SON DISTINTOS SON 1.)
         System.out.println("Op.binario 21 AND 5 = " + (21 & 7) );
         System.out.println("Op.binario 21 OR 5 = " + (21 | 7) );
         System.out.println("Op.binario 21 XOR 5 = " + (21 ^ 7) );

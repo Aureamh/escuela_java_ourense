@@ -17,7 +17,7 @@ public class Coche extends Vehiculo {
     private int numRuedas = 4;
     protected boolean arrancado;
     
-    //En el momento qye creamos un constructor, el de por defecto
+    //En el momento que creamos un constructor, el de por defecto
     //deja de ser implementado por Java.
     public Coche() {
         numRuedas = 4;
