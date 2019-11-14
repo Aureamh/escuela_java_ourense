@@ -17,21 +17,10 @@ public class HilosSencillos {
     //Para ejecutar un hilo tenemos que implementar siempre RUNNABLE.
     
     static int contCompartido =0;
-    
-    ///- - - - - - - - - - - - - - - - - - - - - -
-    //Ensayo de ejecutar a la vez una cantidad de hilos muy grande.
-    
-    ArrayList<String> HilosA = new ArrayList<String>();
-    ArrayList<String> HilosB = new ArrayList<String>();
-    ArrayList<Thread> thread = new ArrayList<Thread>();
-    
-    
-    
-    /// - - - - - - - - - - - - - - - - - - - - -
-    
+
     HiloA hiloA1,hiloA2;
     HiloB hiloB1,hiloB2;
-
+    
     public HilosSencillos() {
         this.hiloA1 = new HiloA();
         this.hiloA2 = new HiloA();
@@ -39,7 +28,7 @@ public class HilosSencillos {
         this.hiloB2 = new HiloB();
     }
 
-    class HiloA implements Runnable{
+    public static class HiloA implements Runnable{
 
         @Override
         public void run() {
@@ -53,7 +42,7 @@ public class HilosSencillos {
         }
     }
     
-    class HiloB implements Runnable{
+    public static class HiloB implements Runnable{
 
         @Override
         public void run() {
