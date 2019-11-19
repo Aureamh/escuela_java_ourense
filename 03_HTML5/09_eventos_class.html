@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--Mejor los controles en un DIV-->
+    <div id="componente_eventos">
+        <label>Evento con listener</label>
+        <input id="input_listo" size=100 />
+        <input id="btn_listo" type="button" value = "Púlsame" />
+        <div id="info_evento"></div>
+    </div>
+    <br />
+    <!--Por separado también debe de funcionar-->
+    <label>Otros eventos con listener</label>
+    <input id="input_otro" size=100 />
+    <input id="btn_otro" type="button" value = "Pulsa este otro"/>
+    <div id="info_evento_otro"></div>
+    <br />
+    <div onclick = "alert('Llanada evento desde HTML');">
+        Zona onclick = "alert();"
+    </div>
+
+     <div id = "quiereUnOnClick">
+        Zona eleDOM.onclick = function(..){...}
+    </div>
+
+    <script src="JS/09_eventos_class.js"></script>
+    <script>
+        //Aseguro que la página se haya cargado para empezar a hacer cosas. Así me aseguro de
+        //que cuando el html va cargando la jerarquía de objetos, coja cosas que ya ha leído.
+        //Por esta razón el <script> siempre debe de ir al final del fichero.
+        window.addEventListener("load",function(){
+            let quiereUnOnClick = document.getElementById("quiereUnOnClick");
+            quiereUnOnClick.onclick = function(evento) {
+                alert("'Llamada evento desde JS, propiedad .onclick'");
+            }
+            
+            let gestorEvListo = new GestorEventosES5("input_listo","btn_listo","info_evento_listo");
+            let gestorEvOtro = new GestorEventosES5("input_otro","btn_otro","info_evento_otro");
+
+        })
+        
+    </script>
+</body>
+
+</html>
