@@ -1,27 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Estructura típica HTML5</title>
 </head>
+
 <body>
     <header>
-        <img src="imagenes/logomates.jpg" style="width:30%"
-        alt = "Logo matemáticas"/>
+        <img src="imagenes/logomates.jpg" style="width:30%" alt="Logo matemáticas" />
         <h1>Título de la web</h1>
 
         <nav>
             <ul>
+                <!-- Unordered List -->
                 <li><a href="01_estructura_html5.html">Menú principal</a></li>
                 <li><a href="02_ejemplo_css3.html">Ejemplos CSS3</a></li>
                 <li><a href="03_formularios.html">Formularios </a></li>
                 <li><a href="04_ejemplos_js.html">Webs dinámicas con JS </a></li>
             </ul>
         </nav>
-    </header>   
+    </header>
     <section>
+        <!-- Los encabezados no se deben usar para el estilo, si no por el contenido-->
         <h2>Encabezado nivel 2, como título secundario</h2>
         <h3>Encabezado nivel 3, otros títutos</h3>
         <article>
@@ -33,29 +36,30 @@
             Con el texto que sea ble ble ble...
             <section>Una parte del artículo</section>
             <section>Otra parte del artículo</section>
-            <video src = "videos/deportevideo.mp4" controls = "controls"></video>
+            <video src="videos/deportevideo.mp4" controls="true"></video>
         </article>
         <table>
             <tr>
-                <th>Nombre</th>
+                <!-- TR para cada una de las filas-->
+                <th>Nombre</th> <!-- TH Para las cabeceras de las columnas -->
                 <th>Apellido</th>
                 <th>Edad</th>
                 <th>Contacto</th>
             </tr>
             <tr>
-                <td>Ana</td>
+                <td>Ana</td> <!-- TD Para cada una de las celdas de las columnas-->
                 <td>Perez</td>
                 <td>40</td>
                 <td><a href="mailto:ana.perez@vn.com">Enviar email</a></td>
             </tr>
             <tr>
-                    <td>Juan</td>
-                    <td>Mendez</td>
-                    <td>38</td>
-                    <td><a href="tel://910023844">Llamar por teléfono</a></td>
-                </tr>
+                <td>Juan</td> <!-- TD Para cada una de las celdas de las columnas-->
+                <td>Mendez</td>
+                <td>38</td>
+                <td><a href="tel://910023844">Llamar por teléfono</a></td>
+            </tr>
         </table>
-    </section> 
+    </section>
     <aside>
         <p>Típico submenú con enlaces de interés</p>
         <ul>
@@ -64,8 +68,13 @@
         </ul>
     </aside>
     <footer>Pie de página
-        <nav><ul><li>Enlaces a RR.SS</li></ul></nav>
+        <nav>
+            <ul>
+                <li>Enlaces a RR.SS</li>
+            </ul>
+        </nav>
         <address>Avenida Buenos Aires, 40. tu ru rú</address>
     </footer>
 </body>
+
 </html>

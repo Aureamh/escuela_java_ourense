@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <section class="container">
+        <div class="offset-3  col-6">
+            <h1 class="offset-2 col-12">Formularios HTML5:</h1>
+            <div class="contact-clean">
+                <form id="form_registro" name="form_registro" action="#" method="get">
+                    <fieldset>
+                        <legend>Formulario de registro</legend>
+                        <div class="form-group">
+                            <label>Nombre: </label>
+                            <input id="nombre" name="nombre" type="text" maxlength="10" required="required"
+                                class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label>Apellidos: </label>
+                            <input id="apellidos" name="apellidos" type="text" maxlength="20" value="Valor por defecto"
+                                class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label>E-mail: </label>
+                            <input id="email" name="email" type="email" maxlength="255" required="required"
+                                placeholder="Introduzca email válido" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label>Edad: </label>
+                            <input name="edad" type="number" required="requires" min="12" max="38" step="5"
+                                placeholder="Texto de fondo aclaratorio" class="form-control" value="24" />
+                        </div>
+                        <div class="form-group">
+                            <label>Fecha: </label>
+                            <div>
+                                <input name="fecha" type="date" size="30" class="form-control" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="">
+                                <input type="reset" value="Limpiar" class="btn btn-danger col-3" />
+                                <input type="button" value="Rellenar" class="btn btn-primary col-3"
+                                    onclick="document.forms.form_registro.nombre.value='Fulano';" />
+                                <input type="submit" value="Enviar" class="btn btn-success col-3" />
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

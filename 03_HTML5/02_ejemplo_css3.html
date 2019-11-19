@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* selector {   propiedad_1=....; propiedad_2=....; } */
+        * {
+            /* Selector universal */
+            margin: 0px;
+            padding: 0px;
+        }
+    </style>
+    <link rel="stylesheet" href="estilos/02_ejemplo_css3.css" />
+</head>
+
+<body>
+    <header>
+        <img src="imagenes/logomates.jpg" style="width:30%" alt="Logo matemáticas" />
+        <div class="titulo">
+            <h1>Título de la web</h1>
+        </div>
+
+        <nav>
+            <ul>
+                <!-- Unordered List -->
+                <li class="elemento-menu"><a id="enlace-menu" name="enlace-menu" href="01_estructura_html5.html">Menú
+                        principal</a></li>
+                <li class="elemento-menu"><a id="enlace-css" href="02_ejemplo_css3.html">Ejemplos CSS3</a></li>
+                <li class="elemento-menu"><a href="03_formularios.html">Formularios </a></li>
+                <li class="elemento-menu"><a href="04_ejemplos_js.html">Webs dinámicas con JS </a></li>
+            </ul>
+        </nav>
+    </header>
+    <nav>Otro menú</nav>
+    <section>
+        <!-- Los encabezados no se deben usar para el estilo, si no por el contenido-->
+        <h2>Encabezado nivel 2, como título secundario</h2>
+        <h3>Encabezado nivel 3, otros títutos</h3>
+        <article class="articulo marco-colocado ">
+            <h4 class="azul-chillon">Aquí iría un artículo</h4>
+            Con el texto que sea bla bla bla... Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit
+            voluptates, dolore quibusdam necessitatibus soluta vitae repudiandae dolorum quidem officia eius,
+            reprehenderit vel beatae. Quas, odio repellendus optio dolorem voluptas et?
+
+        </article>
+        <article class="articulo marco-colocado"></article>
+        <h4>Aquí iría otro artículo</h4>
+        Con el texto que sea ble ble ble...
+        <section>Una parte del artículo</section>
+        <section>Otra parte del artículo... Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
+            repellendus facilis voluptatum, culpa magni saepe rerum nihil, officia ipsa non suscipit iste. Neque quis
+            fugiat accusantium vel, nam dolores ut.</section>
+        <video src="videos/deportevideo.mp4" controls="true"></video>
+        </article>
+        <section class="marco-colocado  section-antigua-azul-chillon">Una parte del artículo. Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Totam perferendis consequuntur dolorem nostrum incidunt debitis facere
+            similique ullam quisquam, ratione autem quae consectetur iste, unde aliquam quod ut fugit tempora!</SECTION>
+        <sectiON class="marco-colocado">Otra parte del artículo. Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. At vel eligendi quod quam? Fugiat perferendis porro dignissimos labore eaque, totam explicabo
+            exercitationem ex magnam excepturi similique necessitatibus suscipit mollitia iure.</section>
+        <table>
+            <tr>
+                <!-- TR para cada una de las filas-->
+                <th class="azul-chillon">Nombre</th> <!-- TH Para las cabeceras de las columnas -->
+                <th>Apellido</th>
+                <th>Edad</th>
+                <th>Contacto</th>
+            </tr>
+            <tr>
+                <td>Ana</td> <!-- TD Para cada una de las celdas de las columnas-->
+                <td>Perez</td>
+                <td>40</td>
+                <td><a href="mailto:ana.perez@vn.com">Enviar email</a></td>
+            </tr>
+            <tr>
+                <td>Juan</td> <!-- TD Para cada una de las celdas de las columnas-->
+                <td>Mendez</td>
+                <td>38</td>
+                <td><a href="tel://910023844">Llamar por teléfono</a></td>
+            </tr>
+        </table>
+    </section>
+    <aside>
+        <p>Típico submenú con enlaces de interés</p>
+        <ul>
+            <li><a href="https://www.w3schools.com/">www.w3schools.com</a></li>
+            <li><a href="https://developer.mozilla.org/es/">Web Mozilla</a></li>
+        </ul>
+    </aside>
+    <footer>Pié de página
+        <nav>
+            <ul>
+                <li>Enlaces a RR.SS.</li>
+            </ul>
+        </nav>
+        <address>Avenida Buenos Aires, 40. tu ru rú</address>
+    </footer>
+</body>
+
+</html>
