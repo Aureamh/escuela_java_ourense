@@ -61,6 +61,12 @@
             display: inline-block;
             width: 400px;
         }
+
+        .enlace-articulo{
+            padding:1em;
+            margin: 1em;
+            background-color: blueviolet;
+        }
         
         /* Media queries, condiciones para seleccionar qué 
             etilos se aplican a qué dispositivos */
