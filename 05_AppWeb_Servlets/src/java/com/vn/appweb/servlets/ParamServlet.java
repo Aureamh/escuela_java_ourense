@@ -88,14 +88,14 @@ public class ParamServlet extends HttpServlet {
             out.println("<h1>Servlet ParamServlet at " + peticionHttp.getContextPath() + "</h1>");
             out.println("<h2>Formulario de registro</h2>");
             //Campos a recibir: nombre e email, obligatorios y con validación HTML5
-            String valorCampo = peticionHttp.getParameter("campo");
+            //String valorCampo = peticionHttp.getParameter("campo");
             String nombre = peticionHttp.getParameter("nombre");
             String email = peticionHttp.getParameter("email");
-            if (valorCampo == null || "".equals(valorCampo) || nombre == null || "".equals(nombre)
+            if (/*valorCampo == null || "".equals(valorCampo) ||*/ nombre == null || "".equals(nombre)
                     || email == null || "".equals(email)) {
                 out.println("<p style = 'color: red'> Los parámetros no son correctos</p>");
             } else {
-                out.println("<p style = 'color: green'>nombre_campo: " + valorCampo + "</p>");
+                //out.println("<p style = 'color: green'>nombre_campo: " + valorCampo + "</p>");
                 out.println("<p style = 'color: green'>nombre_nombre: " + nombre + "</p>");
                 out.println("<p style = 'color: green'>nombre_email: " + email + "</p>");
             }
