@@ -130,7 +130,7 @@ public class ServicioUsuarios {
             return daoUsu.obtenerPorId(id);
         } catch (SQLException ex) {
             Logger.getLogger(ServicioUsuarios.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (ClassNotFoundException ex) {
+        } catch (Exception ex) {
             Logger.getLogger(ServicioUsuarios.class.getName()).log(Level.SEVERE, null, ex);
         }
         return null;
@@ -141,7 +141,7 @@ public class ServicioUsuarios {
             return daoUsu.obtenerPorEmail(email);
         } catch (SQLException ex) {
             Logger.getLogger(ServicioUsuarios.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (ClassNotFoundException ex) {
+        } catch (Exception ex) {
             Logger.getLogger(ServicioUsuarios.class.getName()).log(Level.SEVERE, null, ex);
         }
         return null;
@@ -167,7 +167,7 @@ public class ServicioUsuarios {
             return daoUsu.eliminar(id);
         } catch (SQLException ex) {
             Logger.getLogger(ServicioUsuarios.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (ClassNotFoundException ex) {
+        } catch (Exception ex) {
             Logger.getLogger(ServicioUsuarios.class.getName()).log(Level.SEVERE, null, ex);
         }
         return false;
@@ -178,7 +178,7 @@ public class ServicioUsuarios {
             return daoUsu.obtenerTodos();
         } catch (SQLException ex) {
             Logger.getLogger(ServicioUsuarios.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (ClassNotFoundException ex) {
+        } catch (Exception ex) {
             Logger.getLogger(ServicioUsuarios.class.getName()).log(Level.SEVERE, null, ex);
         }
         return null;

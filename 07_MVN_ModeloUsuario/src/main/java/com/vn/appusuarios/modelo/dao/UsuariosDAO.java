@@ -23,7 +23,7 @@ public class UsuariosDAO implements IGenericDao<Usuario> {
 
     @Override
     public Usuario crear(Usuario nuevoUsu) throws Exception {
-        try (Connection conex = ConexionDerbyDB.obtenerConexion()) {
+        try (Connection conex = ConexionMySqlDB.obtenerConexion()) {
 
             String sqlQuery = "INSERT INTO usuario (email, password, nombre, edad) VALUES (?, ?, ?, ?)";
             PreparedStatement sentenciaSQL = conex.prepareStatement(sqlQuery);
@@ -40,8 +40,8 @@ public class UsuariosDAO implements IGenericDao<Usuario> {
     }
 
     @Override
-    public Usuario obtenerPorId(int id) throws SQLException, ClassNotFoundException {
-        try (Connection conex = ConexionDerbyDB.obtenerConexion()) {
+    public Usuario obtenerPorId(int id) throws Exception {
+        try (Connection conex = ConexionMySqlDB.obtenerConexion()) {
             String sqlQuery = "SELECT id, email, password, nombre, edad  FROM usuario WHERE id = ? ";
 
             PreparedStatement sentenciaSQL = conex.prepareStatement(sqlQuery);
@@ -60,9 +60,9 @@ public class UsuariosDAO implements IGenericDao<Usuario> {
         return null;
     }
 
-    public Usuario obtenerPorEmail(String email) throws SQLException, ClassNotFoundException {
+    public Usuario obtenerPorEmail(String email) throws Exception {
 
-        try (Connection conex = ConexionDerbyDB.obtenerConexion()) {
+        try (Connection conex = ConexionMySqlDB.obtenerConexion()) {
             String sqlQuery = "SELECT id, email, password, nombre, edad  FROM usuario WHERE email = ? ";
 
             PreparedStatement sentenciaSQL = conex.prepareStatement(sqlQuery);
@@ -82,9 +82,9 @@ public class UsuariosDAO implements IGenericDao<Usuario> {
     }
 
     @Override
-    public ArrayList<Usuario> obtenerTodos() throws SQLException, ClassNotFoundException {
+    public ArrayList<Usuario> obtenerTodos() throws Exception {
 
-        try (Connection conex = ConexionDerbyDB.obtenerConexion()) {
+        try (Connection conex = ConexionMySqlDB.obtenerConexion()) {
             String sqlQuery = "SELECT id, email, password, nombre, edad  FROM usuario ";
 
             PreparedStatement sentenciaSQL = conex.prepareStatement(sqlQuery);
@@ -105,7 +105,7 @@ public class UsuariosDAO implements IGenericDao<Usuario> {
 
     @Override
     public Usuario modificar(Usuario usuMod) throws Exception {
-        try (Connection conex = ConexionDerbyDB.obtenerConexion()) {
+        try (Connection conex = ConexionMySqlDB.obtenerConexion()) {
 
             String sqlQuery = "UPDATE usuario SET email=?, password=?, nombre=?, edad=? WHERE id=?";
             PreparedStatement sentenciaSQL = conex.prepareStatement(sqlQuery);
@@ -120,8 +120,8 @@ public class UsuariosDAO implements IGenericDao<Usuario> {
     }
 
     @Override
-    public boolean eliminar(int id) throws SQLException, ClassNotFoundException {
-        try (Connection conex = ConexionDerbyDB.obtenerConexion()) {
+    public boolean eliminar(int id) throws Exception {
+        try (Connection conex = ConexionMySqlDB.obtenerConexion()) {
             String sqlQuery = "DELETE FROM usuario WHERE id=?";
             PreparedStatement sentenciaSQL = conex.prepareStatement(sqlQuery);
             sentenciaSQL.setInt(1, id);
