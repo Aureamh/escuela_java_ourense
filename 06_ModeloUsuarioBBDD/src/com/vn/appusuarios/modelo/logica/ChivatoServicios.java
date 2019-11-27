@@ -1,4 +1,4 @@
-package com.vn.main.dao;
+package com.vn.appusuarios.modelo.logica;
 
 /*
  * To change this license header, choose License Headers in Project Properties.

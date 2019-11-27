@@ -3,8 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.vn.main.dao;
+package com.vn.appusuarios.modelo.test;
 
+import com.vn.appusuarios.modelo.Usuario;
+import com.vn.appusuarios.modelo.Usuario;
+import com.vn.appusuarios.modelo.logica.ServicioUsuarios;
 import java.util.ArrayList;
 import java.util.List;
 import org.junit.Before;
