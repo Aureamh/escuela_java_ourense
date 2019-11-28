@@ -5,11 +5,13 @@
  */
 package com.vn.appusuarios.modelo;
 
-/**
+import java.io.Serializable;
+
+/** Ahora el usuario puede ser un BEAN por implementar Serializable.
  *
  * @author pc
  */
-public class Usuario {
+public class Usuario implements Serializable {
 
     private int id;
 

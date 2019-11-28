@@ -1,0 +1,83 @@
+			¿ Como solucionar los problemas que se nos presentaron en las prácticas ?
+
+>>PROBLEMAS:
+	* NullPointerException.
+	* Organización y estructura de proyectos.
+	* Conflictos Git: Programación por parejas, Clones, Revert.
+	* Conflictos con bb.dd.
+	* Problemas drivers.
+	* Interfaces(Exception?).
+	* Definición Test.
+	* Instanciación objetos, orden de uso.
+	* Problemas conceptuales del DAO, entidad, conexión.
+	* Objetos de conexión, gestión de las conexiones.
+	* Encontrar fallos directos e indirectos.
+	* Validaciones, definición y expresiones reguladas.
+	* ResultSet, Statement, Try-Catch, métodos execute, orden de los parámetros.
+	* Testing, Ids especificaciones.
+
+>>SOLUCIONES:
+
+	+BEANs Java: Judías: POJOs serializables. Objetos de negocio, es decir, objetos de Java
+	que sirven para algo.
+
+
+	+MAVEN: (Otro proyecto de Apache) 
+		* Es un programa o sistema de organización, estructuración y construcción de proyectos.
+		* Gestor de dependencias.
+		* Especificación de versiones(tanto de JDK como de las dependencias).
+		* Nos permite definir arquetipos (como estereotipos antiguos):
+			- Plantilla de proyectos, donde podemos crear proyectos basados en una estructura 
+			predefinida(creada por otros) o creada por nosotros.
+		* Creación de artefactos:
+			- Librería o programa (o proyecto).
+		* Definición y gestión de versiones.
+			- Ayuda con la gestión de los drivers, librerías externas, dependencias internas, etc. 
+			Esto nos va a evitar muchos conflictos de control de versiones(Git).
+		* Casi todo se define en un único fichero y es agnóstico al IDE(NetBeans,Eclipse...). 
+		
+		
+	+ECLIPSE:
+		* Es más potente en algunos aspectos(Maven) pero nos encontraremos con problemas de
+		configuración y gran parte del potencial está disperso en plugins. 
+
+
+	+JPA: (Va de la mano con HIBERNATE)
+		* No ResultSet, NO Statement, NO parámetros, poco SQL, vinculación en las entidades,
+		por ejemplo, vincular POJO <-> TABLA mediante un mapeo de campos <-> variables miembro.
+
+
+	+HIBERNATE: (Va de la manos con JPA)
+		* Nos evita el uso de SQL y las especificaciones de diferentes motores de bb.dd.
+
+
+	+SPRING:
+		* El núcleo nos ayuda a la programación (o definición/declaración) de aspectos de una
+		aplicación.
+		* Spring MVC.
+		* Spring DATA: (Gestión de JPA e Hibernate)
+			- Ayudar a la creación de la tabla mediante la definición de enteidades y creación
+			de repositorios (DAOs).
+			- Se encarga de las conexiones: Genera un POOL de conexiones (conjunto de conexiones
+			pre-instanciadas que se van reutilizando).
+		* Spring Security. 
+		* Spring Boot: Construcción de proyectos y automatización de configuraciones.
+		* Spring Starter: (Initializr). Creación del POM.xml, asistente de creación de proyectos
+		de Spring.
+
+
+	+DOCKER:
+		* Son contedores: Mini máquinas virtuales (VM ligeras) que suelen albergar un único programa.
+		Facilita su instalación, distribución(mediante un repositorio) y su gestión.
+			- Por ejemplo: bb.dd., repoisitorios Git, microservicios independientes que se conectan
+			vía servicios REST(HTTP), SOAP(servicios web), RMI(métodos remotos de Java), etc.
+	
+	
+	+SONAR:
+		* Herramienta que analiza código, detecta errores, complejidad ciclomática, malas praxis de
+		programación, etc.
+		* Nos ayuda a detectar errores cuando el código es más complejo de lo necesario, cuando tenemos 
+		muchas estructuras anidadas (como muchos if).
+
+
+	+MYSQL WORKBENCH: Gestión, diseño y manejo de BBDD MYSQL.
