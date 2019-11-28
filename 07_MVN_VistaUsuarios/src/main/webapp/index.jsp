@@ -5,7 +5,7 @@
 --%>
 <%--Este fichero jsp es un servlet, que es una clase. Se va a ejecutar como un método--%>
 <%-- Esto indica que la cabecera no va a cambiar en ninguna página.--%>
-
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@include file="head.jsp" %> 
 <html>
     <%= head() %>

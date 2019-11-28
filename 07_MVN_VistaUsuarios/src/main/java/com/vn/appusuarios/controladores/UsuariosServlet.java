@@ -67,6 +67,10 @@ public class UsuariosServlet extends HttpServlet {
                 } else {
                     request.getRequestDispatcher("registrarse.jsp").forward(request, response);
                 }
+            }else if (request.getMethod() == "GET") {
+            	Usuario usuario =srvUsu.leerUno(email);
+            	//Habría que comprobar la password.
+            	request.getSession().setAttribute("usuario", usuario);
             }
 
         } catch (Exception ex) {
