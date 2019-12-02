@@ -1,0 +1,16 @@
+<h2>Listado de cuentas</h2>
+<table class="tabla">
+    <thead>
+            <th>Id</th>
+            <th>IBAN</th>
+            <th>DNI</th>
+    </thead>
+    <!-- El asterisco * es que es una directiva estructural (modif. el DOM) -->
+    <tr *ngFor="let cuenta of arrayCuentas">
+            <td>{{ cuenta.id }}</td>
+            <td>{{ cuenta.iban }}</td>
+            <td>{{ cuenta.dni }}</td>
+            <td><input value="X" style="color: red;" 
+                        type="button" (click)="eliminar(cuenta.id)"></td>
+    </tr>
+</table>

@@ -1,6 +1,6 @@
 "use strict";
 var lenguaje = "JavaScript";
-var textoExtra = "con Tipado fuerte OPCIONAL";
+var textoExtra = " con Tipado fuerte OPCIONAL";
 console.log("TypeScript es " + lenguaje + textoExtra);
 var UnaClase = (function () {
     function UnaClase(propiedad) {
