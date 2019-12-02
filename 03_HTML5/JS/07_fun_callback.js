@@ -1,6 +1,6 @@
 //-----FUNCIONES CALLBACK(RETROLLAMADA)-----
 
-//Nomenclatura típica de functionj en variable
+//Nomenclatura típica de function en variable
 let suma = function(x,y){
     return x+y;
 }
